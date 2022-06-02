@@ -1,0 +1,12 @@
+.idea
+ci
+src/demo
+src/test
+src/**/*.spec.ts
+.editorconfig
+.env*
+.eslintrc.yml
+.nycrc.json
+.prettier*
+.yo-rc.json
+.tsconfig.*

@@ -1,0 +1,8 @@
+.idea/
+.env
+.DS_Store
+coverage/
+node_modules/
+.eslintcache
+.nyc_output
+.yo-rc.json
