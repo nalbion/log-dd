@@ -1,4 +1,23 @@
 {
+  "name": "log-driven-dev",
+  "version": "0.0.1",
+  "description": "Encourage useful logging",
+  "author": "Palo IT",
+  "license": "MIT",
+  "main": "dist/index",
+  "typings": "dist/index",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Palo-IT-Australia/log-driven-dev.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Palo-IT-Australia/log-driven-dev/issues"
+  },
+  "homepage": "https://github.com/Palo-IT-Australia/log-driven-dev",
+  "keywords": [
+    "TDD",
+    "logging"
+  ],
   "dependencies": {
     "@prisma/client": "3.14.0",
     "aws-serverless-swagger-ui": "1.0.1",
@@ -52,28 +71,15 @@
     "nyc": "^15.1.0",
     "pre-commit": "^1.2.2",
     "prettier": "^2.3.2",
+    "rimraf": "^3.0.2",
     "sinon": "^11.1.2",
     "sonarqube-scanner": "^2.8.1",
     "ts-node": "10.8.0",
     "ts-sinon": "2.0.2",
     "typescript": "4.7.2"
   },
-  "name": "log-driven-dev",
-  "version": "0.0.1",
-  "description": "",
-  "author": "Palo IT",
-  "license": "private",
-  "private": true,
-  "main": "dist/index",
-  "typings": "dist/index",
-  "pre-commit": [
-    "format:lint:fix",
-    "coverage",
-    "generate-schema",
-    "build"
-  ],
   "scripts": {
-    "clean": "rm -rf lib",
+    "clean": "rimraf dist",
     "coverage": "nyc npm run test",
     "coverage:ci": "nyc npm run test:ci",
     "sonarqube": "node -r dotenv/config ./ci/scripts/sonarqube.js",
@@ -89,18 +95,12 @@
     "build": "tsc",
     "prepublish": "npm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Palo-IT-Australia/log-driven-dev.git"
-  },
-  "keywords": [
-    "Palo IT",
-    "log-driven-dev"
+  "pre-commit": [
+    "format:lint:fix",
+    "coverage",
+    "generate-schema",
+    "build"
   ],
-  "bugs": {
-    "url": "https://github.com/Palo-IT-Australia/log-driven-dev/issues"
-  },
-  "homepage": "https://github.com/Palo-IT-Australia/log-driven-dev",
   "engines": {
     "node": ">= 14.0.0",
     "npm": ">= 6.0.0"

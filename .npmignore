@@ -1,8 +1,9 @@
 .idea
 ci
-src/demo
-src/test
-src/**/*.spec.ts
+dist/demo
+dist/test
+dist/**/*.spec.ts
+src
 .editorconfig
 .env*
 .eslintrc.yml
