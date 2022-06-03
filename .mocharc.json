@@ -1,0 +1,8 @@
+{
+  "require": [
+    "./src/mocha-log-hooks.ts"
+  ],
+  "ignore": [
+    "**/jest-log/**"
+  ]
+}

@@ -18,7 +18,9 @@
     "coverage/",
     "src/test/",
     "src/swagger/",
-    "src/generated/"
+    "src/generated/",
+    "src/jest-log",
+    "jest.config.js"
   ],
   "reporter": [
     "html",

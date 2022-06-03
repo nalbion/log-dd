@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-log console match snapshot: all 1`] = `"INFO:  Hello World!"`;
+
+exports[`jest-log console.info match snapshot: info 1`] = `"Hello World!"`;

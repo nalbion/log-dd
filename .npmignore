@@ -1,6 +1,5 @@
 .idea
 ci
-dist/demo
 dist/test
 dist/**/*.spec.ts
 src
