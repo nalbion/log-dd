@@ -27,12 +27,12 @@ const createMatcher = (level?: LogLevel) => {
   };
 };
 
-const extension: jest.ExpectExtendMap = {
+const jestLog: jest.ExpectExtendMap = {
   console: createMatcher(),
 };
 
 LOG_LEVELS.forEach((level) => {
-  extension[`console_${level}`] = createMatcher(level as LogLevel);
+  jestLog[`console_${level}`] = createMatcher(level as LogLevel);
 });
 
-expect.extend(extension);
+export default jestLog;

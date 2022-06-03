@@ -1,4 +1,4 @@
-import './index';
+import './setup-jest';
 import logCapture from '../log-capture';
 import helloWorld from '../test/hello-world';
 
