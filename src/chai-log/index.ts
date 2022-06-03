@@ -1,4 +1,4 @@
-/// <reference types="./index" />
+/// <reference types="./chai-log" />
 import ChaiStatic = Chai.ChaiStatic;
 import ChaiUtils = Chai.ChaiUtils;
 import logCapture, { LOG_LEVELS, LogLevel } from '../log-capture';

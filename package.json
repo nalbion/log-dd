@@ -1,19 +1,19 @@
 {
   "name": "log-dd",
-  "version": "0.0.1",
-  "description": "Encourage useful logging",
+  "version": "1.0.1",
+  "description": "Logging Driven Development library for JavaScript/TypeScript",
   "author": "Palo IT",
   "license": "MIT",
   "main": "dist/index",
   "typings": "dist/index",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Palo-IT-Australia/log-dd.git"
+    "url": "git+https://github.com/nalbion/log-dd.git"
   },
   "bugs": {
-    "url": "https://github.com/Palo-IT-Australia/log-dd/issues"
+    "url": "https://github.com/nalbion/log-dd/issues"
   },
-  "homepage": "https://github.com/Palo-IT-Australia/log-dd",
+  "homepage": "https://github.com/nalbion/log-dd",
   "keywords": [
     "TDD",
     "logging"

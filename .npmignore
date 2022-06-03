@@ -2,6 +2,8 @@
 ci
 dist/test
 dist/**/*.spec.ts
+coverage
+.nyc_output
 src
 .editorconfig
 .env*
