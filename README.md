@@ -163,10 +163,10 @@ or, do it all together as the pre-commit hook does:
 ___
 ## Technology
 - [Typescript](https://www.typescriptlang.org) - Typescript transpiler
+- [Jest](https://jestjs.io/) - Unit testing framework
 - [Mocha](https://github.com/mochajs/mocha) - Unit testing framework
 - [Chai](https://github.com/chaijs/chai) - Unit testing assertions
 - [Istanbul](https://istanbul.js.org) - Code coverage
-- [ChanceJS](https://chancejs.com/) - Values random generator for unit testing
 
 ___
 ## Best Practices and Coding Patterns

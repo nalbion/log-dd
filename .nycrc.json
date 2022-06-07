@@ -7,18 +7,12 @@
     ".tsx"
   ],
   "exclude": [
-    "src/app.ts",
-    "src/api/main.ts",
     "**/*.d.ts",
     "**/*.spec.ts",
-    ".build/",
     "ci/scripts/",
-    "ci/serverless/",
     "dist/",
     "coverage/",
     "src/test/",
-    "src/swagger/",
-    "src/generated/",
     "src/jest-log",
     "jest.config.js"
   ],
