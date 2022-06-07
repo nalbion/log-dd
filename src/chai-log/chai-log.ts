@@ -1,5 +1,4 @@
 /// <reference types="chai" />
-
 type ConsoleAssertionMethod = ((expected: string | string[]) => Chai.Assertion) & Chai.Assertion;
 
 interface ConsoleAssertion {
@@ -11,18 +10,14 @@ interface ConsoleAssertion {
   error: ConsoleAssertionMethod;
 }
 
-// declare module 'chai-log' {
-//   interface ChaiLog extends Chai.ChaiPlugin {
-//   }
-// }
-
-declare namespace Chai {
-  interface Assertion {
+// eslint-disable-next-line @typescript-eslint/no-namespace
+namespace Chai {
+  export interface Assertion {
     console: ConsoleAssertion;
     // log(expected: string): void;
   }
 
-  interface PromisedAssertion {
+  export interface PromisedAssertion {
     console: ConsoleAssertion;
   }
 }

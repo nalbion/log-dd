@@ -1,6 +1,6 @@
 {
   "name": "log-dd",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Logging Driven Development library for JavaScript/TypeScript",
   "author": "Palo IT",
   "license": "MIT",

@@ -1,71 +1,10 @@
-/// <reference types="./chai-log" />
+import './chai-log';
 import ChaiStatic = Chai.ChaiStatic;
 import ChaiUtils = Chai.ChaiUtils;
 import logCapture, { LOG_LEVELS, LogLevel } from '../log-capture';
 
-// let _overwriteMethod: (methodName: string, method: (this: Chai.AssertionStatic, ...args: any[]) => any) => void;
-// let _chai: ChaiStatic;
-// let _utils: ChaiUtils;
-
-/* * adapted from chaiAsPromised * /
-export const reconfigureChaiLog = () => {
-  function getBasePromise(assertion: any) {
-    return typeof assertion.then === 'function' ? assertion : assertion._obj;
-  }
-
-  function doAsserterAsyncAndAddThen(asserter: Chai.AssertStatic, assertion: any, args: any) {
-    if (!_utils.flag(assertion, 'eventually')) {
-      asserter.apply(assertion, args);
-      return assertion;
-    }
-
-    const derivedPromise = getBasePromise(assertion)
-      .then((value: any) => {
-        assertion._obj = value;
-        _utils.flag(assertion, 'eventually', false);
-
-        return args ? transformAsserterArgs(args) : args;
-      })
-      .then((newArgs: any) => {
-        // console.info('doAsserterAsyncAndAddThen:', newArgs, assertion._obj);
-        asserter.apply(assertion, newArgs);
-
-        return assertion._obj;
-      });
-
-    transferPromiseness(assertion, derivedPromise);
-    return assertion;
-  }
-
-  LOG_LEVELS.forEach((methodName) => {
-    // _chai.Assertion.
-    _chai.Assertion.overwriteMethod(
-      methodName,
-      (originalMethod) =>
-        function (this: Chai.Assertion, args: any[]) {
-          // console.info('overwriteMethod----', methodName, ...args);
-          return doAsserterAsyncAndAddThen(originalMethod, this, args);
-        }
-    );
-  });
-};
-*/
-
 export default function chaiLog(chai: ChaiStatic, utils: ChaiUtils) {
-  // _chai = chai;
-  // _utils = utils;
-
   const Assertion = chai.Assertion;
-
-  // if (!_overwriteMethod) {
-  //   _overwriteMethod = Assertion.overwriteMethod;
-  //   Assertion.overwriteMethod = (methodName: string, originalMethod: (this: Chai.AssertionStatic, ...args: any[]) => any) {
-  //     _overwrittenMethods[methodName] =
-  //     _overwriteMethod(methodName, originalMethod);
-  //   }
-  // }
-
-  // const assertConsole = function (this: Chai.Assertion) {};
 
   const chainConsole = function (this: Chai.Assertion) {
     const target = utils.flag(this, 'object');
@@ -80,10 +19,8 @@ export default function chaiLog(chai: ChaiStatic, utils: ChaiUtils) {
   const assertLogs = (level: LogLevel) =>
     function (this: Chai.Assertion, args: string | string[]) {
       const expected = Array.isArray(args) ? args : args.split('\n');
-      // const actual = utils.flag(this, 'object');
-      const actual = logCapture.get(level === 'log' ? undefined : level);
-      // console.info('assertLogs:', actual.length, actual);
-      // console.info('expected:', expected);
+      const actual = utils.flag(this, 'object');
+      // const actual = logCapture.get(level === 'log' ? undefined : level);
 
       new Assertion(actual).to.have.ordered.members(expected);
     };
