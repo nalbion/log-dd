@@ -3,6 +3,8 @@
 By taking TDD one step further, and specifying what the log output should look like
 before writing the code we can expect that the logs will give maintainers clear and useful logs.
 
+For Java applications, refer to [test-appender](https://github.com/nalbion/test-appender)
+
 ___
 ## **Getting Started**
 
