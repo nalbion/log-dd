@@ -69,7 +69,7 @@
     "test:jest:tdd": "jest --watch",
     "test:verbose": "mocha -r ts-node/register --recursive \"./src/**/*.spec.ts\" --exit",
     "test:tdd": "mocha -r ts-node/register --watch --watch-files \"./src/**/*.ts\" --recursive \"./src/**/*.spec.ts\" ",
-    "test:ci": "mocha -r ts-node/register --require mocha-suppress-logs -R mocha-reporter-sonarqube -O filename=test-report.xml --recursive \"./src/**/*.spec.ts\" --exit",
+    "test:ci": "mocha -r ts-node/register -R mocha-reporter-sonarqube -O filename=test-report.xml --recursive \"./src/**/*.spec.ts\" --exit",
     "build": "tsc -p tsconfig.build.json",
     "prepublish": "npm run build"
   },

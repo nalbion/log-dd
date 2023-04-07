@@ -1,3 +1,4 @@
+// <reference types="./chai-log" />
 import './chai-log';
 import ChaiStatic = Chai.ChaiStatic;
 import ChaiUtils = Chai.ChaiUtils;

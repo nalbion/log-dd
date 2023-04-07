@@ -42,6 +42,7 @@ Alternatively, Mocha supports [root hook plugins](https://mochajs.org/#root-hook
 { "require": ["log-dd/dist/mocha-log-hooks"] }
 ```
 
+---
 ## API
 
 ### `logCapture`

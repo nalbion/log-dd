@@ -1,5 +1,7 @@
+// <reference types="./chai-log" />
 import chai, { expect } from 'chai';
 import chaiLog from './index';
+import './chai-log';
 import logCapture from '../log-capture';
 import helloWorld from '../test/hello-world';
 
